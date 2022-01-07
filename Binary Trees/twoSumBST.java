@@ -11,6 +11,11 @@ public class TreeNode {
     }
 }
 
+/**
+ * Here we are using a hash set to keep track of all seen values.
+ * Each time before inserting the node value, we check if the set already contains a value (k - root.val)
+ */
+
 class Solution {
     public boolean findTarget(TreeNode root, int k) {
         HashSet<Integer> set = new HashSet<>();
