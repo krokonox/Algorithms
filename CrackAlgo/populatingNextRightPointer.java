@@ -53,3 +53,23 @@ class Solution {
     }
     
 }
+
+// DFS recursive
+
+class Solution {
+    
+    public Node connect(Node root) {
+        if(root == null) return null;
+        dfs(root);
+        return root;
+    }
+    
+    public void dfs(Node node) {
+        if(node.left == null) return;
+        node.left.next = node.right;
+        dfs(node.left);
+        if(node.next != null) node.right.next = node.next.left;
+        dfs(node.right);
+    }
+    
+}
