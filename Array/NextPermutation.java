@@ -1,6 +1,7 @@
 class Solution {
     public void nextPermutation(int[] nums) {
-        // Find first decreasing element
+        
+        // Find the first decreasing element
         
         int i = nums.length - 2;
         
